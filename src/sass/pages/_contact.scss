@@ -1,0 +1,57 @@
+@use "../utils/variables";
+#contact {
+   min-height: calc(100vh - 4.063rem);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   text-align: center;
+   align-items: center;
+
+   .contact-container {
+      display: flex;
+      justify-content: space-around;
+      padding-top: 2rem;
+      font-size: 1.25rem;
+   }
+   .title {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .line {
+      height: 3px;
+      width: 20%;
+      background-color: variables.$white-color;
+   }
+   .contact-link {
+      display: flex;
+      padding: 0 1rem 1rem 0;
+      i {
+         margin-right: 0.5rem;
+      }
+   }
+   .link-cont {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .line {
+         margin-right: 20%;
+         height: 3px;
+         width: 30%;
+         background-color: variables.$white-color;
+         transition: all 0.25s ease-out;
+      }
+   }
+   .link-cont:hover {
+      .line {
+         margin: 0;
+         width: 100%;
+      }
+   }
+}
+@media (max-width: 1024px) {
+   .contact-container {
+      flex-direction: column;
+   }
+}

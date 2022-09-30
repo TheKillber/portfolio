@@ -1,0 +1,35 @@
+[
+   {
+      "title": "Banzai Web App",
+      "description": "An application that enables users to create, read, update, and delete blog posts with images and videos. The code is not available because it belongs to Banzai, just as the pages for Banzai's clients. ",
+      "img": "banzai.jpg",
+      "links": { "link": "https://banzaiav.com/" }
+   },
+   {
+      "title": "Notes App",
+      "description": "Want to remember that special idea? Save it here! A simple app with authentication, connected to MongoDB✨.",
+      "img": "notes.jpg",
+      "links": {
+         "github": "https://github.com/TheKillber/todo-app",
+         "link": "https://todo-juansevillano.herokuapp.com/"
+      }
+   },
+   {
+      "title": "Chat App",
+      "description": "A local storage-based real-time chat application.Every user has a unique identifier.👤👥",
+      "img": "chat.jpg",
+      "links": {
+         "github": "https://github.com/TheKillber/Chat-App",
+         "link": "https://arcane-lowlands-07690.herokuapp.com/"
+      }
+   },
+   {
+      "title": "This Portfolio!",
+      "description": "I created this beautiful page using React, minimalism and cleanliness.🔥",
+      "img": "port.jpg",
+      "links": {
+         "link": "/",
+         "github": "https://github.com/TheKillber/portfolio"
+      }
+   }
+]

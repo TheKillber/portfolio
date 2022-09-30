@@ -1,0 +1,186 @@
+@use "../utils/variables";
+nav {
+   padding: 1rem 0;
+   display: flex;
+   align-items: center;
+   width: 50%;
+   height: 4.063rem;
+   background-color: variables.$bg-color;
+
+   .links {
+      display: flex;
+      justify-content: space-around;
+      font-size: 1.25rem;
+      font-weight: 300;
+      text-decoration: none;
+      margin: 2px 3rem 0;
+   }
+   .line {
+      transition: all 0.25s ease-out;
+      height: 2px;
+      border-radius: 5px;
+      width: 0%;
+      background-color: variables.$accent-color;
+   }
+}
+.navlink {
+   text-decoration: none;
+   margin: 0 1rem;
+}
+.navlink-active {
+   margin: 0 1rem;
+   text-decoration: none;
+   font-weight: 700;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   .active-line {
+      height: 2px;
+      width: 2rem;
+      margin-right: 0.5rem;
+      background-color: variables.$white-color;
+   }
+   .line {
+      display: none;
+   }
+}
+
+.hamburger {
+   display: none;
+}
+.circle {
+   display: none;
+   opacity: 0;
+}
+.progress-bar {
+   z-index: 5000;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 0.188rem;
+   border-radius: 5px;
+   background: variables.$white-transparent;
+   transform-origin: 0%;
+}
+
+@media (max-width: 1024px) {
+   .nav-title {
+      z-index: 1000;
+   }
+   nav {
+      z-index: 5000;
+      width: calc(100% - 3.75rem);
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      right: 1.875rem;
+      background-color: variables.$bg-color;
+      .hamburger:hover {
+         cursor: pointer;
+      }
+      .hamburger.desk {
+         display: none;
+      }
+      .hamburger {
+         z-index: 5000;
+         display: block;
+         position: relative;
+         width: 2rem;
+         height: 1.5rem;
+         span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            border-radius: 4px;
+            opacity: 1;
+            width: 100%;
+            background-color: variables.$white-color;
+            transform: rotate(0deg);
+            transition: all 0.25s ease-in-out;
+         }
+         span:nth-child(1) {
+            top: 0px;
+         }
+         span:nth-child(2),
+         span:nth-child(3) {
+            top: 0.66rem;
+         }
+         span:nth-child(4) {
+            top: 1.32rem;
+         }
+      }
+      .open {
+         span:nth-child(1) {
+            top: 18px;
+            width: 0;
+            left: 50%;
+         }
+         span:nth-child(2) {
+            transform: rotate(45deg);
+         }
+         span:nth-child(3) {
+            transform: rotate(-45deg);
+         }
+         span:nth-child(4) {
+            top: 18px;
+            width: 0%;
+            left: 50%;
+         }
+      }
+      .links-container {
+         z-index: 900;
+         opacity: 0;
+         position: absolute;
+         width: 100%;
+         left: 0;
+         right: 0;
+         top: 0;
+         height: 100vh;
+         background-color: variables.$bg-color;
+         transition: all 0.25s ease-in-out;
+         display: flex;
+         visibility: hidden;
+         overflow: hidden;
+         flex-direction: column;
+         justify-content: space-between;
+         .circle {
+            display: block;
+            position: absolute;
+            width: 20%;
+            margin: 0;
+            bottom: 0rem;
+            align-self: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.25s ease-in-out;
+         }
+      }
+      .links-container.open {
+         opacity: 1;
+         visibility: visible;
+
+         .circle {
+            opacity: 1;
+            bottom: 2rem;
+            visibility: visible;
+         }
+      }
+      .links {
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         margin: 0;
+         padding-top: 4.063rem;
+         z-index: 1000;
+      }
+      .navlink-active,
+      .navlink {
+         display: flex;
+         flex-direction: column;
+         width: fit-content;
+         margin: 1.5rem 0;
+      }
+   }
+}

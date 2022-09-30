@@ -1,0 +1,12 @@
+@use "../utils/variables";
+.btn-call {
+   margin: 1rem 0 !important;
+   text-decoration: none;
+   padding: 1rem 2rem;
+   background-color: transparent;
+   border-radius: 5px;
+   border: 2px solid variables.$accent-color;
+   -webkit-box-shadow: 0px 0px 16px 2px #14ffec;
+   box-shadow: 0px 0px 16px 2px #14ffec;
+   cursor: pointer;
+}

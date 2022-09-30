@@ -1,0 +1,32 @@
+@use "../utils/variables";
+
+* {
+   font-family: "Nunito Sans", sans-serif;
+   color: variables.$white-color;
+}
+.title {
+   line-height: 2.2rem;
+   font-weight: 700;
+   font-size: 2.5rem;
+   color: variables.$white-color;
+}
+.subtitle {
+   font-weight: 700;
+   font-size: 1.25rem;
+   color: variables.$white-color;
+}
+.accented-text {
+   font-weight: 700;
+   font-size: 1.25rem;
+   color: variables.$accent-color;
+}
+p {
+   font-weight: 300;
+   font-size: 1rem;
+   color: variables.$white-color;
+}
+@media (max-width: 1024px) {
+   .title {
+      font-size: 2.25rem;
+   }
+}
