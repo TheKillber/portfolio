@@ -43,7 +43,7 @@ const Contact = () => {
                   <i className="fa-brands fa-linkedin"></i>
                   <div className="link-cont">
                      <a
-                        href="https://www.linkedin.com/in/juan-manuel-sevillano-573542156/"
+                        href="https://www.linkedin.com/in/juan-sevillano/"
                         target={"_blank"}
                         rel="noreferrer"
                      >
